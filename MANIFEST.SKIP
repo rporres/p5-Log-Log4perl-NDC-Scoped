@@ -16,6 +16,6 @@ pod2htm*.tmp
 pm_to_blib
 Log-Log4perl-NDC-Scoped-*
 Log-Log4perl-NDC-Scoped-*.tar.gz
-.gitignore
 .swp$
 README.md
+.git*
