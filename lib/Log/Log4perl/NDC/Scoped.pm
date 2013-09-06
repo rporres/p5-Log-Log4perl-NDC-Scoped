@@ -71,6 +71,7 @@ texts pushed with the value of $Log::Log4perl::NDC::Scoped::SEPARATOR
 =head1 AUTHOR
 
 Joni Salonen
+
 Rafael Porres Molina
 
 =head1 LICENCE AND COPYRIGHT
