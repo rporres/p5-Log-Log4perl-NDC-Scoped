@@ -11,7 +11,7 @@ use Log::Log4perl;
 use Carp qw(croak);
 use base qw(Exporter);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 our @EXPORT_OK = qw(push_ndc);
 our %EXPORT_TAGS = (all => \@EXPORT_OK);
 our $SEPARATOR = '|';
@@ -48,11 +48,9 @@ for Log4perl
 
 =head1 SYNOPSIS
 
-use Log::Log4perl::NDC::Scoped qw(push_ndc);
+  use Log::Log4perl::NDC::Scoped qw(push_ndc);
 
-(...)
-
-my $ndc = push_ndc('tag1', 'tag2'); 
+  my $ndc = push_ndc('tag1', 'tag2'); 
 
 =head1 SUBROUTINES
 
@@ -61,14 +59,12 @@ explicitly imported when loading the module.
 
 =head2 push_ndc($text1, $text2, ...)
 
-Crea un NDC en el scope en el que sea llamado. No se puede
-llamar en contexto vacio
-
 Pushes an NDC in the scope where it is called and it pops it
-automatically when the scope is abandoned. It separates the
-texts pushed with the value of $Log::Log4perl::NDC::Scoped::SEPARATOR
+automatically when the scope is abandoned or the variable explicitly
+undefined. It separates the texts pushed with the value of 
+$Log::Log4perl::NDC::Scoped::SEPARATOR variable (a pipe by default)
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Joni Salonen
 
